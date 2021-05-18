@@ -1,42 +1,150 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
-        <center>
-            <h1>Lets do the payment</h1>
-            <!-- <form action="{% url 'success' %}" method="POST">
-                {% csrf_token %}
-                <script
-                    src="https://checkout.razorpay.com/v1/checkout.js"
-                    data-key="rzp_test_rIS0VT9V2kU0p7"
-                    data-amount="50000" 
-                    data-currency="INR"
-                    data-order_id="{{payment.id}}"
-                    data-buttontext="Pay with Razorpay"
-                    data-name="Payment Gateway"
-                    data-description="Implementing a payment gateway for sparks project"
-                    data-image="https://previews.123rf.com/images/putracetol/putracetol1808/putracetol180800348/106705750-payment-logo-icon-design.jpg"
-                    data-prefill.name="Srishti Ganeriwal"
-                    data-prefill.email="srishti@gmail.com"
-                    data-theme.color="#6ab3eb"
-                ></script>
-                <input type="hidden" custom="Hidden Element" name="hidden">
-            </form> -->
-            <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_HBWOKwJEwHtOam/view" data-text="Donate Now" data-color="#528FF0" data-size="large">
-                <script>
-                  (function(){
-                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-                    if(x){
-                        var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-                        s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';
-                        d.body.appendChild(s);
-                    } 
-                    else{
-                        var rzp=window['__rzp__'];
-                        rzp && rzp.init && rzp.init()
-                    }
-                    }
-                    )();
-                </script>
-              </div>
-        </center>
+<style>
+    body{
+        margin: 0px;
+    }
+    .carousel-inner img{
+        height: 450px;
+    }
+    #second{
+        margin: 50px 40px 90px 40px;
+    }
+    #third{
+        margin: 70px 40px 20px 40px;
+    }
+    .card{
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 4px solid gray;
+    }
+    .card-body img{
+        width: 16rem;
+        height: 120px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+    .card-body p{
+        color: black;
+        font-weight: bold;
+    }
+    h5{
+        color:red;
+        font-weight: bolder;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .col-4 img{
+        float: right;
+        height: 500px;
+        width: 90%;
+    }
+    #right{
+        padding: 10px;
+        border: 8px solid pink;
+        height: 500px;
+        width: 100%;
+        border-radius: 20px;
+    }
+    #r1{
+        background-color: rgb(153, 148, 148);
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        padding: 20px;
+        word-wrap: break-word;
+        overflow-y: scroll;
+        text-align: center;
+    }
+    #r1 p{
+        font-size: 2rem;
+        color: pink;
+    }
+    #r1 a{
+        margin-bottom: 12px;
+    }
+    h1{
+        color: mediumpurple;
+        -moz-box-shadow: 0 0 4px mediumpurple;
+        -webkit-box-shadow: 0 0 4px mediumpurple;
+        box-shadow: 0 0 4px mediumpurple;
+    }
+</style>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.wpexplorer.com/wp-content/uploads/wordpress-best-donation-plugins.jpg" class="w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><b>Spread Love and Hope</b></h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'oldage.webp' %}" class="w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><b>Donating is caring</b></h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'homeless.png' %}" class="w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5><b>Your donation our efforts</b></h5>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!-- SECOND PART -->
+
+<div id="second">
+    <center><h1>How to Donate</h1></center><br><br>
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'second_part_img.PNG' %}" alt="">
+        </div>
+        <div class="col-8">
+            <div id="right">
+                <div id="r1">
+                    <p><b>We provide you a platform to donate money to a field which you feel is more important to be helped.There are many fields amoung which you can select and donate according to its minimum requirement and we as a organization ensure that your money gets delivered to the right place.Other than this one can donate any amount >=10 INR.So #DONATE #HELP #SPREAD LOVE.</b></p>
+                    <a class="btn btn-outline-info btn-lg" href="{% url 'about' %}">MORE ABOUT US</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- THRD PART -->
+
+<div id="third">
+    <center><h1>FIELDS TO DONATE</h1></center><br>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        {% for x in fields %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <a href="{% url 'fieldsDetail' %}"><img src="/static/{{x.img}}" alt=""></a>
+                  <h5 class="card-title">{{ x.name }}</h5>
+                  <p class="card-text">Minm Amount Req. : {{ x.money }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+</div>
+
 {% endblock %}
 

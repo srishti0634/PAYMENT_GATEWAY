@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    body{
+        background-color: #b3b2b1;
+    }
+    .jumbotron{
+        background-color: gray;
+        border-radius: 15px;
+        margin-top: 4em;
+        border: 2px solid palegreen;
+        /* SHADOW EFFECT */
+        -moz-box-shadow: 0 0 4px palegreen;
+        -webkit-box-shadow: 0 0 4px palegreen;
+        box-shadow: 0 0 4px palegreen;
+    }
+    h1{
+        padding-top: 40px;
+        color: palegreen;
+    }
+</style>
+<div class="container">
+    <div class="jumbotron">
+        <center>
+            <h1>Lets do the payment</h1>
+            <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_HBWOKwJEwHtOam/view" data-text="Donate Now" data-color="#528FF0" data-size="large">
+                <script>
+                  (function(){
+                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
+                    if(x){
+                        var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
+                        s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                        d.body.appendChild(s);
+                    } 
+                    else{
+                        var rzp=window['__rzp__'];
+                        rzp && rzp.init && rzp.init()
+                    }
+                    }
+                    )();
+                </script>
+              </div>
+        </center>
+    </div>
+</div>
+{% endblock %}
+

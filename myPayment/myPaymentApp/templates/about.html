@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+  body{
+    background-image: url('https://pngimg.com/uploads/door/door_PNG17563.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  li{
+    color: black;
+    font-weight: bolder;
+  }
+  h3{
+    color: #fc44ee;
+  }
+  #partners{
+    margin-top: 30px;
+    text-align: center;
+  }
+  h1{
+    margin-bottom: 8px;
+    color: #ff00ae;
+  }
+</style>
+<div class="container">
+  <div id="partners">
+    <h1><u>Our Partners Includes</u></h1>
+    <div class="medicine">
+      <h3>Medicine and Covid Partners</h3>
+      <ul>
+        <li>Marwari Relief Society</li>
+        <li>Apollo Hostipal</li>
+        <li>ILS</li>
+      </ul>
+    </div>
+    <div class="oldage">
+      <h3>Oldage Home Partners</h3>
+      <ul>
+        <li>Ramakrishan Oldage Home</li>
+        <li>Ananda Ashram Oldage Home</li>
+        <li>Shantiniketan Oldage Home</li>
+      </ul>
+    </div>
+    <div class="homeless">
+      <h3>Food and shelter Partners</h3>
+      <ul>
+        <li>Hind Tiffin Services</li>
+        <li>Edabba Services</li>
+      </ul>
+    </div>
+    <div class="orphanage">
+      <h3>Orphanage Partners</h3>
+      <ul>
+        <li>Calcutta Orphanage</li>
+        <li>Nirmala Shishu Bhavan</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

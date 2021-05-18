@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>You have successfully made the payment </h1>
+<style>
+    .jumbotron{
+        background-color: gray;
+        border: 2px solid palegreen;
+        border-radius: 15px;
+        padding-top: 3em;
+        padding-bottom: 2em;
+        /* SHADOW EFFECT */
+        -moz-box-shadow: 0 0 4px palegreen;
+        -webkit-box-shadow: 0 0 4px palegreen;
+        box-shadow: 0 0 4px palegreen;
+        text-align: center;
+    }
+</style>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>You have successfully made the payment </h1>
+        </div>
+    </div>
 {% endblock %}
         

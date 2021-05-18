@@ -5,16 +5,14 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 def home(request):
-    # if request.method == 'POST':
-    #     order_amount = 50000
-    #     order_currency = 'INR'
-    #     client = razorpay.Client(auth('rzp_test_rIS0VT9V2kU0p7','1YCqjGWIzLlzQxx61AQWOxWd'))
-    #     payment = client.order.create({
-    #         'amount':order_amount,
-    #         'currency':order_currency,
-    #         'payment_capture':'1'
-    #     })
-    return render(request, "home.html")
+    fields=[{'name':'Medicine', 'img':'blood.png', 'money':'Rs.50'},{'name':'Covid Emergency Equipments', 'img':'oxygen.jpeg', 'money':'Rs.300'},{'name':'Old Age Home', 'img':'old.webp', 'money':'Rs.10'},{'name':'For Homeless', 'img':'homeless_1.jpg', 'money':'Rs.10'},{'name':'Education', 'img':'edu.jpg', 'money':'Rs.10'},{'name':'Orphanage', 'img':'orphan.jpg', 'money':'Rs.10'},{'name':'General Purpose', 'img':'gen.jpg', 'money':'Rs.10'},{'name':'For Free Vaccination', 'img':'vaccinr.jpg', 'money':'Rs.450'}]
+    return render(request, "home.html", {'fields':fields})
+
+def about(request):
+    return render(request, "about.html")
+
+def fieldsDetail(request):
+    return render(request, "fieldsDetail.html")
 
 @csrf_exempt
 def success(request):
